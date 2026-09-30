@@ -28,7 +28,7 @@ export function PartySite() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
-    const observer = new IntersectionObserver((entries) => entries.forEach((entry) => entry.isIntersecting && entry.target.classList.add('is-visible')), { threshold: 0.12 })
+    const observer = new IntersectionObserver((entries) => entries.forEach((entry) => entry.isIntersecting && entry.target.classList.add('is-visible')), { threshold: 0 })
     document.querySelectorAll('.reveal').forEach((element) => observer.observe(element))
     window.addEventListener('scroll', onScroll, { passive: true })
     onScroll()
