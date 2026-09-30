@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import Image from 'next/image'
-import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, Check, ChevronDown, Menu, MessageCircle, Sparkles, X } from 'lucide-react'
+import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, Check, ChevronDown, Camera, Menu, MessageCircle, Sparkles, X } from 'lucide-react'
 import { categoryLabel, items, translations, whatsappUrl, type Locale, type PartyItem } from '@/lib/content'
 
 const localeNames: Record<Locale, string> = { pt: 'PT', es: 'ES', en: 'EN' }
@@ -74,8 +74,8 @@ export function PartySite() {
 
       <section id="contact" className="px-5 py-20 lg:px-10 lg:py-28"><div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 rounded-[2rem] bg-[#d9a7d9] p-8 sm:p-12 lg:flex-row lg:items-end lg:p-16"><div><p className="eyebrow">{t.contact.eyebrow}</p><h2 className="font-display mt-4 max-w-2xl text-4xl font-bold leading-tight sm:text-6xl">{t.contact.title}</h2><p className="mt-5 max-w-lg text-lg text-[#3d3145]/70">{t.contact.body}</p></div><div className="flex flex-wrap gap-3"><a href={chatUrl} className="motion-button whatsapp-glow inline-flex shrink-0 items-center gap-2 rounded-full bg-[#3d3145] px-6 py-3.5 font-semibold text-white transition hover:bg-[#e85d7b]">{t.contact.cta}<MessageCircle size={18} /></a><a href={smsUrl} className="motion-button inline-flex shrink-0 items-center gap-2 rounded-full border border-[#3d3145]/25 bg-white/60 px-6 py-3.5 font-semibold text-[#3d3145] transition hover:border-[#e85d7b] hover:text-[#e85d7b]">{smsLabel}<MessageCircle size={18} /></a></div></div></section>
 
-      <footer className="border-t border-[#3d3145]/10 px-5 py-8 lg:px-10"><div className="mx-auto flex max-w-7xl flex-col gap-5 text-sm text-[#3d3145]/60 sm:flex-row sm:items-center sm:justify-between"><span className="font-display text-xl font-bold text-[#e85d7b]">[NOME].</span><span>{t.footer}</span><a href="https://instagram.com" aria-label="Instagram" className="hover:text-[#e85d7b]"><Sparkles /></a></div></footer>
-      <a href={chatUrl} aria-label="WhatsApp" className="whatsapp-pulse motion-button fixed bottom-5 right-5 z-30 flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl shadow-[#25D366]/30 transition hover:scale-105"><MessageCircle size={27} /></a>
+      <footer className="border-t border-[#3d3145]/10 px-5 py-8 lg:px-10"><div className="mx-auto flex max-w-7xl flex-col gap-5 text-sm text-[#3d3145]/60 sm:flex-row sm:items-center sm:justify-between"><span className="font-display text-xl font-bold text-[#e85d7b]">[NOME].</span><span>{t.footer}</span><a href="https://instagram.com/donali.party" target="_blank" rel="noreferrer" aria-label="Instagram Donali Party" className="hover:text-[#e85d7b]"><Camera /></a></div></footer>
+      <a href="https://instagram.com/donali.party" target="_blank" rel="noreferrer" aria-label="Instagram Donali Party" className="motion-button fixed bottom-5 right-24 z-30 flex size-14 items-center justify-center rounded-full bg-gradient-to-br from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white shadow-xl shadow-[#ee2a7b]/25 transition hover:scale-105"><Camera size={26} /></a><a href={chatUrl} aria-label="WhatsApp" className="whatsapp-pulse motion-button fixed bottom-5 right-5 z-30 flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl shadow-[#25D366]/30 transition hover:scale-105"><MessageCircle size={27} /></a>
     </main>
   )
 }
