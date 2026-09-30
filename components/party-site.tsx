@@ -16,7 +16,7 @@ export function PartySite() {
   const t = translations[locale]
   const filteredItems = useMemo(() => filter === 'all' ? items : items.filter((item) => item.category === filter || item.audience === filter), [filter])
   const chatUrl = whatsappUrl(`${t.hero.cta} — [NOME]`)
-  const smsUrl = `sms:55[NUMERO]?body=${encodeURIComponent(`${locale === 'pt' ? 'Olá' : locale === 'es' ? 'Hola' : 'Hello'} — [NOME]`)}`
+  const smsUrl = `sms:+17745285548?body=${encodeURIComponent(`${locale === 'pt' ? 'Olá' : locale === 'es' ? 'Hola' : 'Hello'} — [NOME]`)}`
   const [heroIndex, setHeroIndex] = useState(0)
   const [scrolled, setScrolled] = useState(false)
   const heroItems = items.slice(0, 6)
@@ -34,7 +34,7 @@ export function PartySite() {
 
   const itemMessage = (item: PartyItem) => `${t.portfolio.action}: ${item.name[locale]} | ${categoryLabel(item.category, t)} | ${item.description[locale]}`
   const itemUrl = (item: PartyItem) => whatsappUrl(itemMessage(item))
-  const itemSmsUrl = (item: PartyItem) => `sms:55[NUMERO]?body=${encodeURIComponent(itemMessage(item))}`
+  const itemSmsUrl = (item: PartyItem) => `sms:+17745285548?body=${encodeURIComponent(itemMessage(item))}`
 
   return (
     <main className="min-h-screen overflow-hidden bg-[#fffaf5] text-[#3d3145]">
