@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import Image from 'next/image'
 import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, Check, ChevronDown, Camera, Menu, MessageCircle, Sparkles, X } from 'lucide-react'
-import { categoryLabel, items, translations, whatsappUrl, type Locale, type PartyItem } from '@/lib/content'
+import { audienceLabel, categoryLabel, items, translations, whatsappUrl, type Locale, type PartyItem } from '@/lib/content'
 
 const localeNames: Record<Locale, string> = { pt: 'PT', es: 'ES', en: 'EN' }
 const logoImage = '/donali-party-logo.png'
@@ -37,7 +37,7 @@ export function PartySite() {
 
   const smsLabel = locale === 'pt' ? 'Enviar SMS' : locale === 'es' ? 'Enviar SMS' : 'Send SMS'
 
-  const itemMessage = (item: PartyItem) => `${quoteMessage} ${t.portfolio.action}: ${item.name[locale]} | ${categoryLabel(item.category, t)} | ${item.description[locale]}`
+  const itemMessage = (item: PartyItem) => `${quoteMessage}\nCategoria: ${audienceLabel(item.audience, t)}, ${categoryLabel(item.category, t)}\nNome da foto: ${item.name[locale]}`
   const itemUrl = (item: PartyItem) => whatsappUrl(itemMessage(item))
   const itemSmsUrl = (item: PartyItem) => `sms:+17745285548?body=${encodeURIComponent(itemMessage(item))}`
 
