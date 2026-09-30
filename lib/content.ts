@@ -52,4 +52,6 @@ export const translations = {
 
 export const categoryLabel = (category: PartyItem['category'], t: (typeof translations)[Locale]) => ({ rental: t.categories.rental, decoration: t.categories.decoration, pickup: t.categories.pickup }[category])
 
+export const audienceLabel = (audience: PartyItem['audience'], t: (typeof translations)[Locale]) => ({ kids: t.portfolio.kids, adults: t.portfolio.adults }[audience])
+
 export const whatsappUrl = (message: string) => `https://wa.me/17745285548?text=${encodeURIComponent(message)}`
