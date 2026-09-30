@@ -9,15 +9,15 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Sep%2030%2C%202026%2C%2011_55_57%20AM-GeLW3SBvbFWYJktdJf6jjJ8SyWhl9T.png',
+        url: '/donali-party-logo.png',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Sep%2030%2C%202026%2C%2011_55_57%20AM-GeLW3SBvbFWYJktdJf6jjJ8SyWhl9T.png',
+        url: '/donali-party-logo.png',
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Sep%2030%2C%202026%2C%2011_55_57%20AM-GeLW3SBvbFWYJktdJf6jjJ8SyWhl9T.png',
+        url: '/donali-party-logo.png',
         type: 'image/png',
       },
     ],
