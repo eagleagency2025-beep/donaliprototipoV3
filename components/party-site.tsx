@@ -6,7 +6,7 @@ import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, Check, ChevronDown, Cam
 import { categoryLabel, items, translations, whatsappUrl, type Locale, type PartyItem } from '@/lib/content'
 
 const localeNames: Record<Locale, string> = { pt: 'PT', es: 'ES', en: 'EN' }
-const logoImage = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Sep%2030%2C%202026%2C%2011_55_57%20AM-GeLW3SBvbFWYJktdJf6jjJ8SyWhl9T.png'
+const logoImage = '/donali-party-logo.png'
 const handmadeImage = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-a0Zs4wWUtsL7upenSLOJs5XJKPNOXk.png'
 
 export function PartySite() {
