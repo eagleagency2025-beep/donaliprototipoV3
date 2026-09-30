@@ -15,8 +15,13 @@ export function PartySite() {
   const [menuOpen, setMenuOpen] = useState(false)
   const t = translations[locale]
   const filteredItems = useMemo(() => filter === 'all' ? items : items.filter((item) => item.category === filter || item.audience === filter), [filter])
-  const chatUrl = whatsappUrl(`${t.hero.cta} — [NOME]`)
-  const smsUrl = `sms:+17745285548?body=${encodeURIComponent(`${locale === 'pt' ? 'Olá' : locale === 'es' ? 'Hola' : 'Hello'} — [NOME]`)}`
+  const quoteMessage = locale === 'pt'
+    ? 'Olá! Gostaria de fazer um orçamento para uma festa.'
+    : locale === 'es'
+      ? '¡Hola! Me gustaría solicitar un presupuesto para una fiesta.'
+      : 'Hello! I would like to request a quote for a party.'
+  const chatUrl = whatsappUrl(quoteMessage)
+  const smsUrl = `sms:+17745285548?body=${encodeURIComponent(quoteMessage)}`
   const [heroIndex, setHeroIndex] = useState(0)
   const [scrolled, setScrolled] = useState(false)
   const heroItems = items.slice(0, 6)
@@ -32,7 +37,7 @@ export function PartySite() {
 
   const smsLabel = locale === 'pt' ? 'Enviar SMS' : locale === 'es' ? 'Enviar SMS' : 'Send SMS'
 
-  const itemMessage = (item: PartyItem) => `${t.portfolio.action}: ${item.name[locale]} | ${categoryLabel(item.category, t)} | ${item.description[locale]}`
+  const itemMessage = (item: PartyItem) => `${quoteMessage} ${t.portfolio.action}: ${item.name[locale]} | ${categoryLabel(item.category, t)} | ${item.description[locale]}`
   const itemUrl = (item: PartyItem) => whatsappUrl(itemMessage(item))
   const itemSmsUrl = (item: PartyItem) => `sms:+17745285548?body=${encodeURIComponent(itemMessage(item))}`
 
