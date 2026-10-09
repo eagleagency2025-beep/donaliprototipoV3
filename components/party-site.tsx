@@ -16,10 +16,10 @@ export function PartySite() {
   const t = translations[locale]
   const filteredItems = useMemo(() => filter === 'all' ? items : items.filter((item) => item.category === filter || item.audience === filter), [filter])
   const quoteMessage = locale === 'pt'
-    ? 'Olá! Gostaria de fazer um orçamento para uma festa.'
+    ? 'Olá! Vim pelo site e gostaria de fazer um orçamento para uma festa.'
     : locale === 'es'
-      ? '¡Hola! Me gustaría solicitar un presupuesto para una fiesta.'
-      : 'Hello! I would like to request a quote for a party.'
+      ? '¡Hola! Vine por el sitio web y me gustaría solicitar un presupuesto para una fiesta.'
+      : 'Hello! I came from the website and would like to request a quote for a party.'
   const chatUrl = whatsappUrl(quoteMessage)
   const smsUrl = `sms:+17745285548?body=${encodeURIComponent(quoteMessage)}`
   const [heroIndex, setHeroIndex] = useState(0)
