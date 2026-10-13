@@ -29,7 +29,7 @@ export function PartySite() {
   requestAnimationFrame(() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth', block: 'start' }))
   }
   const pickupByAudience = {
-  boys: ['pickup-minions', 'pickup-jp-amiga', 'pickup-spidey', 'pickup-looney', 'pickup-rei-leao', 'pickup-avengers', 'pickup-batman', 'pickup-bluey', 'pickup-avengers-b', 'pickup-fazendinha-vermelha'],
+  boys: ['pickup-minions', 'pickup-jp-amiga', 'pickup-spidey', 'pickup-looney', 'pickup-rei-leao', 'pickup-avengers', 'pickup-batman', 'pickup-bluey', 'pickup-fazendinha-vermelha'],
   girls: ['pickup-emilly-vick', 'pickup-borboletas', 'pickup-chuva-amor', 'pickup-abelhinha', 'pickup-joaninha', 'pickup-magali', 'pickup-fazendinha', 'pickup-cerejas', 'pickup-boiadeira', 'pickup-floresta', 'pickup-moranguinho'],
   }
   const filteredItems = useMemo(() => {
