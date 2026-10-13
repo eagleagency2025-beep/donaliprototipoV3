@@ -29,8 +29,8 @@ export function PartySite() {
   requestAnimationFrame(() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth', block: 'start' }))
   }
   const pickupByAudience = {
-  boys: ['pickup-minions', 'pickup-jp-amiga', 'pickup-spidey', 'pickup-looney', 'pickup-rei-leao', 'pickup-avengers', 'pickup-batman', 'pickup-bluey', 'pickup-avengers-b', 'pickup-fazendinha-vermelha'],
-  girls: ['pickup-emilly-vick', 'pickup-borboletas', 'pickup-chuva-amor', 'pickup-abelhinha', 'pickup-joaninha', 'pickup-magali', 'pickup-fazendinha', 'pickup-cerejas', 'pickup-boiadeira', 'pickup-floresta', 'pickup-moranguinho'],
+  boys: ['pickup-minions', 'pickup-jp-amiga', 'pickup-spidey', 'pickup-looney', 'pickup-rei-leao', 'pickup-avengers', 'pickup-batman', 'pickup-bluey', 'pickup-fazendinha-vermelha', 'pickup-safari', 'pickup-arca', 'pickup-toy-story', 'pickup-pool', 'pickup-mundo-bita', 'pickup-cocomelon', 'pickup-carros', 'pickup-365-sorrisos', 'pickup-dinossauros', 'pickup-arco-iris', 'pickup-bluey-festa', 'pickup-construcao', 'pickup-futebol', 'pickup-patrulha', 'pickup-spider-man-2', 'pickup-hot-wheels', 'pickup-roblox', 'pickup-stitch-ilha'],
+  girls: ['pickup-emilly-vick', 'pickup-borboletas', 'pickup-chuva-amor', 'pickup-abelhinha', 'pickup-joaninha', 'pickup-magali', 'pickup-fazendinha', 'pickup-cerejas', 'pickup-boiadeira', 'pickup-floresta', 'pickup-moranguinho', 'pickup-safari', 'pickup-arca', 'pickup-barbie', 'pickup-jardim', 'pickup-chapeuzinho', 'pickup-minnie', 'pickup-pool', 'pickup-mundo-bita', 'pickup-cocomelon', 'pickup-365-sorrisos', 'pickup-frozen', 'pickup-arco-iris', 'pickup-patrulha', 'pickup-stitch', 'pickup-princesas', 'pickup-stitch-ilha', 'pickup-sereia'],
   }
   const filteredItems = useMemo(() => {
   if (filter === 'pickup') return items.filter((item) => item.category === 'pickup' && pickupByAudience[pickupAudience].includes(item.id))
