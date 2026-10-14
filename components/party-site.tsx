@@ -63,7 +63,7 @@ export function PartySite() {
 
   const smsLabel = locale === 'pt' ? 'Enviar SMS' : locale === 'es' ? 'Enviar SMS' : 'Send SMS'
 
-  const itemMessage = (item: PartyItem) => `${quoteMessage}\nCategoria: ${audienceLabel(item.audience, t)}, ${categoryLabel(item.category, t)}\n${item.name[locale]}`
+  const itemMessage = (item: PartyItem) => `${quoteMessage}\nCategoria: ${audienceLabel(item.audience, t)}, ${categoryLabel(item.category, t)}\nTema: ${item.name[locale]}`
   const itemUrl = (item: PartyItem) => whatsappUrl(itemMessage(item))
   const itemSmsUrl = (item: PartyItem) => `sms:+17745285548?body=${encodeURIComponent(itemMessage(item))}`
 
